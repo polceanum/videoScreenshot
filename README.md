@@ -1,5 +1,5 @@
 # videoScreenshot
-Tool to save screenshot from video with frame number
+Tool to save screenshot from video with frame number. Output will be saved as PNG under "screenshots" folder.
 
 # compilation
 ```bash
