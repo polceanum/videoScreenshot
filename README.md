@@ -20,6 +20,14 @@ make
 
 p == pause video
 
+0 == advance 1 frame (10^0)
+
+1 == advance 10 frames (10^1)
+
+2 == advance 100 frames (10^2)
+
+3 == advance 1000 frames (10^3)
+
 s == save screenshot
 
 q == quit

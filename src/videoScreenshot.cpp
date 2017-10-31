@@ -41,6 +41,48 @@ int main(int argc, char **argv)
             playVideo = !playVideo;
         }
 
+        if(key == '0')
+        {
+            cap >> frame;
+            crtFrame++;
+            cv::imshow("Video", frame);
+            std::cerr << "Current frame: " << crtFrame-1 << "\n";
+        }
+
+        if(key == '1')
+        {
+            for (int i=0; i<10; ++i)
+            {
+                cap >> frame;
+                crtFrame++;
+            }
+            cv::imshow("Video", frame);
+            std::cerr << "Current frame: " << crtFrame-1 << "\n";
+        }
+
+        if(key == '2')
+        {
+            for (int i=0; i<100; ++i)
+            {
+                cap >> frame;
+                crtFrame++;
+            }
+            cv::imshow("Video", frame);
+            std::cerr << "Current frame: " << crtFrame-1 << "\n";
+        }
+
+        if(key == '3')
+        {
+            std::cerr << "Skipping 1000 frames..." << "\n";
+            for (int i=0; i<1000; ++i)
+            {
+                cap >> frame;
+                crtFrame++;
+            }
+            cv::imshow("Video", frame);
+            std::cerr << "Current frame: " << crtFrame-1 << "\n";
+        }
+
         if(key == 's')
         {
             //save
@@ -65,7 +107,10 @@ int main(int argc, char **argv)
             break;
         }
 
-        //std::cerr << crtFrame-1 << "\n";
+        if (playVideo)
+        {
+            std::cerr << "Current frame: " << crtFrame-1 << "\n";
+        }
     }
     return 0;
 }
